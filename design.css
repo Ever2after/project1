@@ -1,0 +1,380 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+span{
+  cursor: pointer;
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body{
+  height : 1000px;
+  width : 375px;
+}
+
+.barcontainer{
+  position : fixed;
+  background:#fff;
+  z-index: 10;
+  top:0;
+  width : 375px;
+  height : 108px;
+}
+
+.conditionbar{
+  top:0;
+  background:#fff;
+  width : 375px;
+  height : 20px;
+}
+.conditionbar img{
+  width : 373px;
+  height : auto;
+  margin-left : 1px;
+  margin-right : 1px;
+}
+
+
+#selectmode{
+  display:none;
+}
+
+
+.thisiscalendar{
+  width : 375px;
+  height : 36px;
+  margin-top:32px;
+  margin-bottom:20px;
+  display : inline-block;
+}
+
+.thisiscalendar span{
+  width : 44px;
+  height : 36px;
+  font-family : NotoSansCJKkr;
+  font-size : 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align : left;
+  color:#000000;
+  margin-left : 12px;
+}
+
+#bell{
+  float : right;
+  margin : 2px 12px 2px 0;
+}
+
+#alarm{
+  width : 14px;
+  height : 14px;
+  border : solid 0.5px;
+  border-radius : 40px;
+  background : #ff6565;
+  position : fixed;
+  left : 347px;
+  top: 54px;
+  font-family: NotoSansCJKkr;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: -1px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+hr{
+  color:#000000;
+  border-width : 0.25px;
+  top : 108px;
+}
+
+.calandercontainer{
+  width : 375px;
+  height : 338.5px;
+  margin-top : 108px;
+  padding-top: 16px;
+}
+
+.yearandmonth{
+  width : 375px;
+  height : 29px;
+
+  margin-left : 14px;
+
+}
+
+.yearandmonth span{
+ width: 98px;
+ height: 29px;
+ font-family: NotoSansCJKkr;
+ font-size: 20px;
+ font-weight: 500;
+ line-height: 1.45;
+ text-align: left;
+ color: #006cb3;
+}
+
+.dayofweek {
+  text-align:center;
+  height:18px;
+  margin-top:16px;
+  margin-bottom:12px;
+  display : flex;
+}
+.dayofweek span{
+  width: 11px;
+  height: 18px;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: left;
+  color: #c6c6c6;
+  margin-left : 40px;
+}
+
+.dayofweek span:nth-child(1){margin-left : 29px; }
+.dayofweek span:nth-child(7){margin-right : 29px; }
+
+
+.days div{
+  display:flex;
+  margin-bottom:30px;
+  text-align: center;
+  height:14px;
+}
+
+.days .week6{ margin-bottom : 3px;}
+
+.days div span {
+  line-height : 37px;
+  width: 40px;
+  height: 40px;
+  border: 1px #006cb3;
+  border-radius :50px;
+  margin-left : 11px;
+  position : relative;
+  overflow : hidden;
+  z-index : 3;
+}
+
+.available:hover{color:#fff;}
+
+.available:before{
+  content:"";
+  z-index:-1;
+  position:absolute;
+  background:#006cb3;
+  transition:1s;
+  left:0;
+  top:0;
+  width:100%;
+  height:0;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+}
+
+.available:hover:before{height:200%}
+
+.week1 span, .week2 span{
+ font-family: NotoSansCJKkr;
+ font-size: 14px;
+ color: #c6c6c6;
+}
+
+.week3 span, .week4 span, .week5 span, .week6 span{
+     font-family: NotoSansCJKkr;
+     font-size: 14px;
+     color: #000000;
+}
+
+.week1 span:nth-child(1), .week2 span:nth-child(1), .week3 span:nth-child(1),.week4 span:nth-child(1),.week5 span:nth-child(1),.week6 span:nth-child(1){
+  margin-left : 15px;
+}
+.week1 span:nth-child(7), .week2 span:nth-child(7), .week3 span:nth-child(7),.week4 span:nth-child(7),.week5 span:nth-child(7),.week6 span:nth-child(7){
+  margin-right : 14px;
+}
+.week1 span{
+  opacity:0;
+}
+.week1 span:nth-child(7){
+  opacity:1;
+}
+
+#today{
+  border: solid 1px #006cb3;
+  width:38px;
+  height : 38px;
+}
+#unavailable{
+    background-color:#f5f5f5;
+    margin-left:0;
+    padding-left:11px;
+    border-radius:0;
+}
+
+#leftunavailable{
+  background-color:#f5f5f5;
+  margin-left:0;
+  padding-left:15px;
+  border-radius:0;
+}
+#rightunavailable{
+  background-color:#f5f5f5;
+  margin-left:0;
+  margin-right:0;
+  padding-left:11px;
+  padding-right:14px;
+  border-radius:0;
+}
+#firstunavailable {
+  background: url("./images/calendar_select_area_left.svg");
+  background-position: 5px 0;
+  background-repeat : no-repeat;
+  background-color:#fff;
+  margin:0;
+  padding-left:11px;
+  border-radius:0;
+}
+#lastunavailable{
+  background: url("./images/calendar_select_area_right.svg");
+  background-position: -165px 0;
+  background-repeat : no-repeat;
+  background-color:#fff;
+  margin:0;
+  padding-left:11px;
+  border-radius:0;
+}
+
+#popup1{
+  width : 375px;
+  height : 256px;
+  bottom : 0;
+  position : fixed;
+  background : #fff;
+  display : none;
+  z-index : 10;
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.partyroom{
+  top:0;
+  width : 375px;
+  height : 92px;
+  display:flex;
+}
+
+.partyroom img{
+    width : 60px;
+    height : 60px;
+}
+
+.roomimg{
+    width : 60px;
+    height : 60px;
+    margin : 16px 24px 16px 24px;
+}
+
+
+#roominfo1, #roominfo2{
+  width : 120px;
+  height : 42px;
+  margin : 25px 0 25px 0;
+  display : inline-block;
+  padding : 0;
+}
+
+.roomname{
+  height : 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  line-height : 20px;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+  margin-bottom : 8px;
+  letter-spacing : -1.5px;
+}
+
+.roomaddress{
+  height : 14px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: #707070;
+  letter-spacing: -1.5px;
+}
+
+#roominfo1 .roomname, #roominfo .roomname,#roominfo2 .roomaddress{
+  width : 80px;
+}
+
+#roominfo1 .roomaddress{ width : 93px;}
+
+.checking{
+  width : 32px;
+  height : 32px;
+  margin : 30px 24px 30px 91px;
+  cursor : pointer;
+}
+
+.checking img{
+  width : 32px;
+  height : 32px;
+}
+
+
+.alter{
+  width : 375px;
+  height : 72px;
+  display:flex;
+}
+
+
+.alter div:nth-child(1){
+  margin : 22px 86px 21px 24px;
+  width: 93px;
+  height: 29px;
+}
+
+.alter div:nth-child(2){
+  padding : 14px 50px 14px 50px;
+  margin : 12px 12px 12px 0;
+  width:  52px;
+  height: 20px;
+  text-align : center;
+  border-radius: 4px;
+  background-color: #006cb3;
+
+}
+
+#totaldays{
+  width: 53px;
+  height: 29px;
+  font-family: NotoSansCJKkr;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+  letter-spacing: -2px;
+}
+
+#alterbutton{
+  width: 52px;
+  height: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
