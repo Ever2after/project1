@@ -95,7 +95,7 @@
   margin-top : 155px;
 }
 
-#daytime{
+#daytime, #nighttime, #allday{
   width : 375px;
   display : flex;
 }
@@ -154,6 +154,7 @@
   letter-spacing : -1px;
   margin-top : 16px;
   margin-bottom : 16px;
+  cursor : pointer;
 }
 
 .timeinfo{
@@ -247,5 +248,219 @@ hr{
   text-align: center;
   color: #ffffff;
    border-radius: 4px;
+  letter-spacing: -1px;
+}
+
+#popup2{
+   width : 375px;
+   height : 100%;
+   top:0;
+   left:0;
+   position : fixed;
+   z-index : 100;
+   border: solid 1px #707070;
+   background-color: rgba(23, 23, 23, 0.7);
+   display : none;
+}
+#popupbox{
+  width : 351px;
+  height : 484px;
+  position : fixed;
+  top : 0;
+  left : 12px;
+  border-radius: 4px;
+  background-color : rgba(255,255,255,1);
+}
+
+#popupbox .selectinfo{
+  width : 351px;
+  height: 123px;
+  display : flex;
+}
+
+#popupbox .roominfo{
+  width : 259px;
+  height : 83px;
+  margin : 24px 0 16px 16px;
+}
+
+
+#popupbox #totaldays{
+  width : 64px;
+  height : 36px;
+  margin-bottom : 16px;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  color: #000000;
+  letter-spacing: -1.7px;
+}
+
+#popupbox #roomname{
+  width : 69px;
+  height : 12px;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #707070;
+  letter-spacing : -1px;
+  margin-bottom : 6px;
+}
+
+#popupbox #days{
+  width : 102px;
+  height : 13px;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  color: #707070;
+  letter-spacing: -0.5px;
+}
+
+#popupbox #roomimg{
+  width : 60px;
+  height : 60px;
+  margin : 47px 16px 16px 0;
+}
+
+.announce{
+  width : 351px;
+  height : 39px;
+}
+
+.announce div:nth-child(1) {
+  width : 164px;
+  height : 14px;
+  margin : 40px 171px 12px 16px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: #000000;
+  letter-spacing: -1.5px;
+}
+
+
+.announce div:nth-child(2){
+  width : 305px;
+  height : 13px;
+  margin : 0 30px 0 16px;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  color: #c6c6c6;
+  letter-spacing :-0.8px;
+}
+
+.daytimeinfo{
+  width : 335px;
+  height : 40px;
+  margin : 40px 0 0 16px;
+  display : flex;
+}
+
+.daytimeinfo img{
+  width : 40px;
+  height : 40px;
+  margin-right : 16px;
+}
+
+
+.daytimeinfo div{
+  width: 39px;
+  height: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+  margin : 10px 240px 10px 0;
+  letter-spacing: -1px;
+}
+
+form{
+  width : 351px;
+  height : 202px;
+  flex;
+}
+
+.content{
+  width : 47px;
+  height : 12px;
+  font-family: NotoSansCJKkr;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  color: #707070;
+}
+.timeinput .content{
+  margin : 31px 59px 27px 16px;
+  letter-spacing: -1.5px;
+}
+.priceinput .content{
+  margin : 16px 59px 16px 16px;
+  letter-spacing: -1px;
+}
+
+
+.timeinput, .priceinput{
+  display : flex;
+  width : 351px;
+}
+
+#timeinput, #priceinput{
+  border-radius: 4px;
+  border: solid 1px #e6e6e6;
+}
+
+#timeinput {
+  width : 189px;
+  height : 14px;
+  margin : 16px 16px 10px 0;
+  padding : 14px 11px 14px 11px;
+}
+
+#timeinput::placeholder {
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: #707070;
+}
+
+#priceinput{
+  width : 189px;
+  height : 15px;
+  margin : 0 16px 0 0 ;
+  padding : 14px 11px 13px 11px;
+}
+
+#priceinput::placeholder{
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: #707070;
+}
+
+#submit{
+  width : 351px;
+  height : 48px;
+  margin-top : 40px;
+  padding : 14px 149px 14px 150px;
+  background : #006cb3;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0 0 4px 4px;
   letter-spacing: -1px;
 }
