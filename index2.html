@@ -12,10 +12,33 @@
         var top = ($(window).height()-484)/2;
         $('#popupbox').css('top', top);
         $('#popup2').show();
-
-
       });
+
+      $('.button').click(function(){
+        if($(this).hasClass('unselected')){
+          var cls = `${this.classList[1]}`;
+          $(`.${cls}.selected`).attr("src", './images/check_icon.svg');
+          $(`.${cls}.selected`).attr('class', `button ${cls} unselected`);
+          $(this).attr("src", './images/check_icon_fill.svg');
+          $(this).attr('class', `button ${cls} selected`);
+          $('.complete').show();
+        }
+      });
+
+      $('.confirmbutton').click(function(){
+        $('.button.selected').attr('src','./images/check_icon_disabled.svg');
+        $('.complete').hide();
+      });
+
     });
+    $(document).mouseup(function(e){
+      var container = $('#popup2');
+      if(container.has(e.target).length ===0){
+        container.hide();
+      }
+    });
+
+
     </script>
   </head>
   <body>
@@ -79,14 +102,15 @@
           </div>
         </div>
         <div class="selectbutton">
-          <img src="./images/check_icon.svg" alt="">
-          <img src="./images/check_icon_fill.svg" alt="">
+          <img class="button day selected" src="./images/check_icon_disabled.svg" alt="">
+          <img class="button day unselected" src="./images/check_icon.svg" alt="">
         </div>
       </div>
     </section>
 
     <div class="whitespace">
     </div>
+
     <section id="nighttime">
       <div class="info1">
         <img src="./images/nighttime_small_select.svg" alt="">
@@ -117,14 +141,15 @@
           </div>
         </div>
         <div class="selectbutton">
-          <img src="./images/check_icon.svg" alt="">
-          <img src="./images/check_icon_fill.svg" alt="">
+          <img class="button night selected" src="./images/check_icon_disabled.svg" alt="">
+          <img class="button night unselected" src="./images/check_icon.svg" alt="">
         </div>
       </div>
     </section>
 
     <div class="whitespace">
     </div>
+
     <section id="allday">
       <div class="info1">
         <img src="./images/allday_small_select.svg" alt="">
@@ -155,14 +180,14 @@
           </div>
         </div>
         <div class="selectbutton">
-          <img src="./images/check_icon.svg" alt="">
-          <img src="./images/check_icon_fill.svg" alt="">
+          <img class="button allday selected" src="./images/check_icon_disabled.svg" alt="">
+          <img class="button allday unselected" src="./images/check_icon.svg" alt="">
         </div>
       </div>
     </section>
 
     <div class="bottomspace">
-    </div>
+
 
 
     <div class="complete">
@@ -202,7 +227,7 @@
             <div>낮타임</div>
           </div>
           <div class="alterinfo">
-              <form  action="/change" method="post">
+              <form  action="" method="post">
                 <div class="timeinput">
                     <div class="content">
                       시간 입력

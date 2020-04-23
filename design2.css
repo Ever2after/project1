@@ -202,6 +202,10 @@ hr{
   height : 32px;
 }
 
+.button.unselected{
+  cursor : pointer;
+}
+
 .selectbutton img:nth-child(1){
   margin-bottom : 16px;
 }
@@ -233,6 +237,7 @@ hr{
   bottom : 9px;
   background :#fff;
   box-shadow: 3px -3px 4px 0 rgba(0, 0, 0, 0.06);
+  display : none;
 }
 
 .confirmbutton {
