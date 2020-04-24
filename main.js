@@ -14,7 +14,7 @@ var time="10시~19시";
 var price = "120,000원";
 
 app.get('/', function(request, response){
-    fs.readFile('./index', 'utf8', function(err, description){
+    fs.readFile('./index1', 'utf8', function(err, description){
         var html = `${description}`;
         response.send(`${description}`);
     });
