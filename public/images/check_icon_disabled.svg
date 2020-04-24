@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g id="prefix__check_icon_disabled" transform="translate(-315.669 -801.375)">
+        <g id="prefix__타원_539" data-name="타원 539" transform="translate(315.669 801.375)" style="stroke-width:2px;fill:#e6e6e6;stroke:#e6e6e6">
+            <circle cx="16" cy="16" r="16" style="stroke:none"/>
+            <circle cx="16" cy="16" r="15" style="fill:none"/>
+        </g>
+        <path id="prefix__ok" d="M4 12.781L8.817 17.6 19.416 7" transform="translate(320.296 805.223)" style="stroke:#fff;stroke-linecap:square;fill:none;stroke-width:2px"/>
+    </g>
+</svg>
